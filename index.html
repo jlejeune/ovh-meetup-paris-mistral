@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>OpenStack, du sur mesure pour le Cloud Public</title>
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/ovh.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown data-background="data/ovh-meet-up-brest-digit-event.jpg">
+                    # OpenStack
+                    ### du sur mesure pour le Cloud Public
+                    ![OVH](data/logo-ovh-meet-up-small.png)
+                </section>
+
+                <section data-markdown data-background="data/slide.png">
+                    ## Who are we ?
+                </section>
+
+                <section data-background="data/slide.png">
+                    <section data-markdown>
+                        ## What do we do ?
+                    </section>
+                    <section data-markdown data-separator-notes="^Note:">
+                        ## Cloud public
+                    </section>
+                    <section data-markdown data-separator-notes="^Note:">
+                        ## Stockage
+                    </section>
+                </section>
+
+                <section data-background="data/slide.png">
+                    <section data-markdown>
+                        ## Cloud Public ?
+                    </section>
+                    <section data-markdown>
+                        * Compute
+                            * instance
+                            * network
+                            * image
+                        * Stockage
+                            * objet
+                            * block --> volume / disk pour les instances
+                    </section>
+                    <section data-markdown data-background="data/it_crowd_1.gif">
+                        # OpenStack
+                        ![OpenStack](data/openstack_logo.png)
+                    </section>
+                    <section data-markdown data-background="data/it_crowd_2.gif">
+                        # Ceph
+                        ![Ceph](data/ceph_logo.png)
+                    </section>
+                </section>
+
+                <section data-background="data/slide.png">
+                    <section data-markdown>
+                        ## OpenStack
+                    </section>
+                    <section data-markdown>
+                        * Open Source
+                        * Python
+                        * Magasin d'API
+                        * Premiere version en 2010
+                        * Chez OVH
+                          * Swift depuis 2012 (hubic)
+                          * Runabove en 2014
+                          * Public Cloud en 2015
+                    </section>
+                    <section data-markdown>
+                        ## Architecture logique
+                    </section>
+                    <section data-markdown data-background="data/osog_0001.png" data-background-color="white" data-background-size="contain">
+                    </section>
+                    <section data-markdown data-separator-notes="^Note:" data-background="data/osog_0001.b.png" data-background-color="white" data-background-size="contain">
+                        ## Architecture OVH
+                        * API (nova, neutron, etc.)
+                            * Load Balancer
+                            * Minimum 2 backends
+                        * MySQL
+                            * Load Balancer
+                            * Minimum 3 backends en cluster galera
+                        * RabbitMQ
+                            * Minimum 3 backends en cluster
+                        * Agents
+                            * Repartition de maniere pseudo aleatoire sur les computes
+                            * Redondance pour certains services (DHCP)
+
+                        Note:
+                        * 12k computes, 500 par regions
+                    </section>
+                    <section data-markdown>
+                        ## Scaling issues
+                        * neutron
+                        * nova
+                        * mysql
+                        * rabbit
+                    </section>
+                    <section data-markdown data-background-color='white'>
+                        ## Reseaux prives chez OVH: vRack
+                        ![vRack](data/vrack.png)
+                    </section>
+                </section>
+
+                <section data-background-color='black'>
+                    <section data-markdown data-background="data/robots.gif">
+                        ## Automatisation et tooling
+                    </section>
+                    <section data-markdown data-background="data/effet-mouton.jpg">
+                    </section>
+                    <section data-markdown data-background="data/puppet.gif" data-background-size="contain">
+                        ## Puppet
+                    </section>
+                    <section data-markdown data-background="data/ansible.gif" data-background-size="contain">
+                        ## Ansible
+                    </section>
+                    <section data-markdown data-background="data/clush.gif" data-background-size="contain">
+                        ## Clustershell
+                    </section>
+                    <section data-markdown data-background="data/tmux.gif" data-background-size="contain">
+                        ## Tmux
+                    </section>
+                </section>
+
+                <section data-background="data/slide.png">
+                    <section data-markdown>
+                        ## Pour vous,
+                        ## manipuler / gerer
+                        ## votre cloud
+                    </section>
+                    <section data-markdown data-background-color="white" data-background="data/manager.gif" data-background-size="contain">
+                        ## Manager
+                    </section>
+                    <section data-markdown data-background-color="white" data-background="data/horizon.gif" data-background-size="contain">
+                        ## Horizon
+                    </section>
+                    <section data-markdown data-background-color="black" data-background="data/clicli.gif" data-background-size="contain">
+                        ## Command Line Interface
+                    </section>
+                    <section data-markdown data-background-color="black" data-background="data/curl.gif" data-background-size="contain">
+                        ## cURL / API
+                    </section>
+                </section>
+
+                <section data-markdown data-background="data/slide.png">
+                    ## Conclusion
+
+                    cloud@ml.ovh.net
+                </section>
+
+                <section data-markdown data-background="data/camion_plot.gif">
+                    ## Questions?
+                </section>
+
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
+                slideNumber: 'c/t',
+
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+</html>
