@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <title>OpenStack, du sur mesure pour le Cloud Public</title>
+        <title>Automation to infinity and beyond thanks to Mistral</title>
 
         <link rel="stylesheet" href="css/reveal.css">
         <link rel="stylesheet" href="css/theme/ovh.css">
@@ -25,8 +25,8 @@
         <div class="reveal">
             <div class="slides">
                 <section data-markdown data-background="data/ovh-meet-up-brest-digit-event.jpg">
-                    # OpenStack
-                    ### du sur mesure pour le Cloud Public
+                    # Mistral
+                    ## Automation to infinity and beyond
                     ![OVH](data/logo-ovh-meet-up-small.png)
                 </section>
 
@@ -34,55 +34,69 @@
                     ## Who are we ?
                 </section>
 
+                <!-- move somewhere else -->
+                <!--
+                <section data-markdown data-background-color='white'>
+                    ## Cloudflow
+                    ![cloudflow](data/cloudflow.png)
+                </section>
+                -->
+
                 <section data-background="data/slide.png">
                     <section data-markdown>
                         ## What do we do ?
                     </section>
-                    <section data-markdown data-separator-notes="^Note:">
-                        ## Cloud public
+                    <section data-markdown>
+                        * Environment
+                            * X regions
+                            * Y hosts
+                            * Z instances
+                        * Daily tasks
+                            * maintenance
+                            * incidents management
+                            * customer support
+                        * But only 15 persons in the team
                     </section>
-                    <section data-markdown data-separator-notes="^Note:">
-                        ## Stockage
+                    <section data-markdown>
+                        ## We need a robot 
+                        ![Mistral](data/mistral_logo.png)
                     </section>
                 </section>
 
                 <section data-background="data/slide.png">
                     <section data-markdown>
-                        ## Cloud Public ?
+                        ## Why Mistral ?
                     </section>
                     <section data-markdown>
-                        * Compute
-                            * instance
-                            * network
-                            * image
-                        * Stockage
-                            * objet
-                            * block --> volume / disk pour les instances
-                    </section>
-                    <section data-markdown data-background="data/it_crowd_1.gif">
-                        # OpenStack
-                        ![OpenStack](data/openstack_logo.png)
-                    </section>
-                    <section data-markdown data-background="data/it_crowd_2.gif">
-                        # Ceph
-                        ![Ceph](data/ceph_logo.png)
+                        * Uniformity with public service (configuration mastering)
+                        * Easy access to entire OpenStack API through the workflows
+                        * Can have workers in different zones (vs StackStorm)
+                        * Powerful workflow engine
+                        * YAML definition easy to version
+                        * Custom actions can be written easily in Python
                     </section>
                 </section>
 
                 <section data-background="data/slide.png">
                     <section data-markdown>
-                        ## OpenStack
+                        ## Use cases
                     </section>
                     <section data-markdown>
-                        * Open Source
-                        * Python
-                        * Magasin d'API
-                        * Premiere version en 2010
-                        * Chez OVH
-                          * Swift depuis 2012 (hubic)
-                          * Runabove en 2014
-                          * Public Cloud en 2015
+                        * TODO : put here some examples
                     </section>
+                </section>
+
+                <section data-background="data/slide.png">
+                    <section data-markdown>
+                        ## How to ?
+                    </section>
+                    <section data-markdown>
+                        * TODO : put here some examples (pictures in data dir)
+                    </section>
+                </section>
+
+                <!--
+                <section data-background="data/slide.png">
                     <section data-markdown>
                         ## Architecture logique
                     </section>
@@ -101,7 +115,8 @@
                         * Agents
                             * Repartition de maniere pseudo aleatoire sur les computes
                             * Redondance pour certains services (DHCP)
-
+                  -->
+                  <!--
                         Note:
                         * 12k computes, 500 par regions
                     </section>
@@ -117,7 +132,8 @@
                         ![vRack](data/vrack.png)
                     </section>
                 </section>
-
+                -->
+                <!--
                 <section data-background-color='black'>
                     <section data-markdown data-background="data/robots.gif">
                         ## Automatisation et tooling
@@ -157,17 +173,41 @@
                         ## cURL / API
                     </section>
                 </section>
+                --> 
+
+                <section data-background="data/slide.png">
+                    <section data-markdown>
+                        ## Benefits
+                    </section>
+                    <section data-markdown>
+                        * Make maintenance operations easier and faster
+                        * Reduce human errors
+                        * Reduce team's workload
+                    </section>
+                </section>
+
+                <section data-background="data/slide.png">
+                    <section data-markdown>
+                        ## Problems / concerns
+                    </section>
+                    <section data-markdown>
+                        * Manage the large amount of data in mistral SQL database
+                        * Discover new bugs (scheduling, migration) increasing the number of operations
+                        * FIXME : micro versions of APIs are not supported in Mistral clients
+                    </section>
+                </section>
 
                 <section data-markdown data-background="data/slide.png">
                     ## Conclusion
-
-                    cloud@ml.ovh.net
                 </section>
 
-                <section data-markdown data-background="data/camion_plot.gif">
-                    ## Questions?
+                <section data-markdown data-background="data/slide.png">
+                    ## Questions ?
                 </section>
 
+                <section data-markdown data-background="data/slide.png">
+                    ## Thanks !
+                </section>
             </div>
         </div>
 
