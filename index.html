@@ -32,9 +32,6 @@
 
                 <section data-background="data/slide.png">
                     <h2>Who are we ?</h2>
-                    <aside class="notes">
-                        TODO :
-                    </aside>
                 </section>
 
                 <!-- move somewhere else -->
@@ -54,21 +51,21 @@
                         <ul class="fragment">
                             <li>Environment</li>
                                 <ul>
-                                    <li>X regions</li>
-                                    <li>Y hosts</li>
-                                    <li>Z instances</li>
+                                    <li>30 regions</li>
+                                    <li>15k hosts</li>
+                                    <li>300k instances</li>
                                 </ul>
                             <li>Daily tasks
                                 <ul>
-                                    <li>maintenance</li>
+                                    <li>maintenance/upgrade operations</li>
                                     <li>incidents management</li>
-                                    <li>customer support</li>
+                                    <li>continuous product evolutions</li>
                                 </ul>
                             <li>But only 15 persons in the team</li>
                         </ul>
                     </section>
                     <section data-markdown>
-                        ## We need a robot
+                        ## We needed a robot
                         ![Mistral](data/mistral_logo.png)
                     </section>
                 </section>
@@ -78,10 +75,7 @@
                         <h2>Why Mistral ?</h2>
                         <ul class="fragment">
                             <li>Uniformity with public service (configuration mastering)</li>
-                            <li>Easy access to entire OpenStack API through the workflows</li>
-                            <li>Can have workers in different zones (vs StackStorm)</li>
-                            <li>Powerful workflow engine</li>
-                            <li>YAML definition easy to version</li>
+                            <li>Easy access to entire OpenStack API via built-in actions</li>
                             <li>Custom actions can be written easily in Python</li>
                         </ul>
                     </section>
@@ -91,21 +85,18 @@
                     <section>
                         <h2>Architecture</h2>
                     </section>
-                    <section>
-                        TODO
+                    <section data-markdown data-background-color='white'>
+                        ![mistral](data/mistral_architecture.jpeg)
                     </section>
-                    <!--
-                    <section data-markdown data-background="data/osog_0001.png" data-background-color="white" data-background-size="contain">
-                    </section>
-                    -->
                 </section>
 
                 <section data-background="data/slide.png">
                     <section>
                         <h2>Use cases</h2>
                         <ul class="fragment">
-                            <li>TODO : put here some examples</li>
-                            <li>etc...</li>
+                            <li>Self-healing operations</li>
+                            <li>Large scale upgrades and maintenances</li>
+                            <li>Boring tasks</li>
                         </ul>
                     </section>
                 </section>
@@ -114,12 +105,12 @@
                     <section>
                         <h2>How trigger worflows ?</h2>
                         <ul class="fragment">
-                            <li>Using cli for maintenance operations</li>
                             <li>Using OMNI/Metrics for self-healing operations</li>
+                            <li>Using cli for other operations</li>
                         </ul>
                     </section>
                     <aside class="notes">
-                        OMNI :
+                        OMNI : alerting plugin
                         Metrics : timeseries database
                     </aside>
                 </section>
@@ -129,8 +120,8 @@
                         <h2>Benefits</h2>
                         <ul class="fragment">
                             <li>Make maintenance operations easier and faster</li>
-                            <li>Reduce human errors</li>
                             <li>Reduce team's workload</li>
+                            <li>Reduce human errors</li>
                         </ul>
                     </section>
                 </section>
@@ -140,16 +131,14 @@
                         <h2>Problems / concerns</h2>
                         <ul class="fragment">
                             <li>Manage the large amount of data in mistral SQL database</li>
-                            <li>Discover new bugs (scheduling, migration) increasing the number of operations</li>
-                            <li>FIXME : micro versions of APIs are not supported in Mistral clients</li>
+                            <li>Discovered new bugs (scheduling, migration) because of the increasing number of operations</li>
                         </ul>
                     </section>
                 </section>
 
                 <section data-markdown data-background="data/slide.png">
                     ## Conclusion
-                    Note:
-                      Next step : deploy a new public region with Mistral
+                    Next step : deploy new public regions with Mistral ?
                 </section>
 
                 <section data-markdown data-background="data/slide.png">
