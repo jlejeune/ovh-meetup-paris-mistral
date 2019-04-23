@@ -24,14 +24,17 @@
     <body>
         <div class="reveal">
             <div class="slides">
-                <section data-markdown data-background="data/ovh-meet-up-brest-digit-event.jpg">
-                    # Mistral
-                    ## Automation to infinity and beyond
-                    ![OVH](data/logo-ovh-meet-up-small.png)
+                <section data-background="data/ovh-meet-up-brest-digit-event.jpg">
+                    <h1>Mistral</h1>
+                    <h2>Automation to infinity and beyond</h2>
+                    <img src="data/logo-ovh-meet-up-small.png"></img>
                 </section>
 
-                <section data-markdown data-background="data/slide.png">
-                    ## Who are we ?
+                <section data-background="data/slide.png">
+                    <h2>Who are we ?</h2>
+                    <aside class="notes">
+                        TODO :
+                    </aside>
                 </section>
 
                 <!-- move somewhere else -->
@@ -43,162 +46,110 @@
                 -->
 
                 <section data-background="data/slide.png">
-                    <section data-markdown>
-                        ## What do we do ?
+                    <section>
+                        <h2>What do we do ?</h2>
+                        <aside class="notes">
+                            TODO :
+                        </aside>
+                        <ul class="fragment">
+                            <li>Environment</li>
+                                <ul>
+                                    <li>X regions</li>
+                                    <li>Y hosts</li>
+                                    <li>Z instances</li>
+                                </ul>
+                            <li>Daily tasks
+                                <ul>
+                                    <li>maintenance</li>
+                                    <li>incidents management</li>
+                                    <li>customer support</li>
+                                </ul>
+                            <li>But only 15 persons in the team</li>
+                        </ul>
                     </section>
                     <section data-markdown>
-                        * Environment
-                            * X regions
-                            * Y hosts
-                            * Z instances
-                        * Daily tasks
-                            * maintenance
-                            * incidents management
-                            * customer support
-                        * But only 15 persons in the team
-                    </section>
-                    <section data-markdown>
-                        ## We need a robot 
+                        ## We need a robot
                         ![Mistral](data/mistral_logo.png)
                     </section>
                 </section>
 
                 <section data-background="data/slide.png">
-                    <section data-markdown>
-                        ## Why Mistral ?
-                    </section>
-                    <section data-markdown>
-                        * Uniformity with public service (configuration mastering)
-                        * Easy access to entire OpenStack API through the workflows
-                        * Can have workers in different zones (vs StackStorm)
-                        * Powerful workflow engine
-                        * YAML definition easy to version
-                        * Custom actions can be written easily in Python
-                    </section>
-                </section>
-
-                <section data-background="data/slide.png">
-                    <section data-markdown>
-                        ## Use cases
-                    </section>
-                    <section data-markdown>
-                        * TODO : put here some examples
+                    <section>
+                        <h2>Why Mistral ?</h2>
+                        <ul class="fragment">
+                            <li>Uniformity with public service (configuration mastering)</li>
+                            <li>Easy access to entire OpenStack API through the workflows</li>
+                            <li>Can have workers in different zones (vs StackStorm)</li>
+                            <li>Powerful workflow engine</li>
+                            <li>YAML definition easy to version</li>
+                            <li>Custom actions can be written easily in Python</li>
+                        </ul>
                     </section>
                 </section>
 
                 <section data-background="data/slide.png">
-                    <section data-markdown>
-                        ## How to ?
+                    <section>
+                        <h2>Architecture</h2>
                     </section>
-                    <section data-markdown>
-                        * TODO : put here some examples (pictures in data dir)
+                    <section>
+                        TODO
                     </section>
-                </section>
-
-                <!--
-                <section data-background="data/slide.png">
-                    <section data-markdown>
-                        ## Architecture logique
-                    </section>
+                    <!--
                     <section data-markdown data-background="data/osog_0001.png" data-background-color="white" data-background-size="contain">
                     </section>
-                    <section data-markdown data-separator-notes="^Note:" data-background="data/osog_0001.b.png" data-background-color="white" data-background-size="contain">
-                        ## Architecture OVH
-                        * API (nova, neutron, etc.)
-                            * Load Balancer
-                            * Minimum 2 backends
-                        * MySQL
-                            * Load Balancer
-                            * Minimum 3 backends en cluster galera
-                        * RabbitMQ
-                            * Minimum 3 backends en cluster
-                        * Agents
-                            * Repartition de maniere pseudo aleatoire sur les computes
-                            * Redondance pour certains services (DHCP)
-                  -->
-                  <!--
-                        Note:
-                        * 12k computes, 500 par regions
-                    </section>
-                    <section data-markdown>
-                        ## Scaling issues
-                        * neutron
-                        * nova
-                        * mysql
-                        * rabbit
-                    </section>
-                    <section data-markdown data-background-color='white'>
-                        ## Reseaux prives chez OVH: vRack
-                        ![vRack](data/vrack.png)
-                    </section>
+                    -->
                 </section>
-                -->
-                <!--
-                <section data-background-color='black'>
-                    <section data-markdown data-background="data/robots.gif">
-                        ## Automatisation et tooling
-                    </section>
-                    <section data-markdown data-background="data/effet-mouton.jpg">
-                    </section>
-                    <section data-markdown data-background="data/puppet.gif" data-background-size="contain">
-                        ## Puppet
-                    </section>
-                    <section data-markdown data-background="data/ansible.gif" data-background-size="contain">
-                        ## Ansible
-                    </section>
-                    <section data-markdown data-background="data/clush.gif" data-background-size="contain">
-                        ## Clustershell
-                    </section>
-                    <section data-markdown data-background="data/tmux.gif" data-background-size="contain">
-                        ## Tmux
+
+                <section data-background="data/slide.png">
+                    <section>
+                        <h2>Use cases</h2>
+                        <ul class="fragment">
+                            <li>TODO : put here some examples</li>
+                            <li>etc...</li>
+                        </ul>
                     </section>
                 </section>
 
                 <section data-background="data/slide.png">
-                    <section data-markdown>
-                        ## Pour vous,
-                        ## manipuler / gerer
-                        ## votre cloud
+                    <section>
+                        <h2>How trigger worflows ?</h2>
+                        <ul class="fragment">
+                            <li>Using cli for maintenance operations</li>
+                            <li>Using OMNI/Metrics for self-healing operations</li>
+                        </ul>
                     </section>
-                    <section data-markdown data-background-color="white" data-background="data/manager.gif" data-background-size="contain">
-                        ## Manager
-                    </section>
-                    <section data-markdown data-background-color="white" data-background="data/horizon.gif" data-background-size="contain">
-                        ## Horizon
-                    </section>
-                    <section data-markdown data-background-color="black" data-background="data/clicli.gif" data-background-size="contain">
-                        ## Command Line Interface
-                    </section>
-                    <section data-markdown data-background-color="black" data-background="data/curl.gif" data-background-size="contain">
-                        ## cURL / API
-                    </section>
+                    <aside class="notes">
+                        OMNI :
+                        Metrics : timeseries database
+                    </aside>
                 </section>
-                --> 
 
                 <section data-background="data/slide.png">
-                    <section data-markdown>
-                        ## Benefits
-                    </section>
-                    <section data-markdown>
-                        * Make maintenance operations easier and faster
-                        * Reduce human errors
-                        * Reduce team's workload
+                    <section>
+                        <h2>Benefits</h2>
+                        <ul class="fragment">
+                            <li>Make maintenance operations easier and faster</li>
+                            <li>Reduce human errors</li>
+                            <li>Reduce team's workload</li>
+                        </ul>
                     </section>
                 </section>
 
                 <section data-background="data/slide.png">
-                    <section data-markdown>
-                        ## Problems / concerns
-                    </section>
-                    <section data-markdown>
-                        * Manage the large amount of data in mistral SQL database
-                        * Discover new bugs (scheduling, migration) increasing the number of operations
-                        * FIXME : micro versions of APIs are not supported in Mistral clients
+                    <section>
+                        <h2>Problems / concerns</h2>
+                        <ul class="fragment">
+                            <li>Manage the large amount of data in mistral SQL database</li>
+                            <li>Discover new bugs (scheduling, migration) increasing the number of operations</li>
+                            <li>FIXME : micro versions of APIs are not supported in Mistral clients</li>
+                        </ul>
                     </section>
                 </section>
 
                 <section data-markdown data-background="data/slide.png">
                     ## Conclusion
+                    Note:
+                      Next step : deploy a new public region with Mistral
                 </section>
 
                 <section data-markdown data-background="data/slide.png">
